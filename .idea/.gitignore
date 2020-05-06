@@ -1,2 +1,9 @@
 # Default ignored files
 /shelf/
+/out/
+/workspace.xml
+/vcs.xml
+/uiDesigner.xml
+/modules.xml
+/misc.xml
+/JCalculatorV2.iml
