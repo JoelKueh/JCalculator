@@ -1,21 +1,2 @@
-# IDEA
-# ----
-.idea
-.idea/
-.shelf
-/*.iml
-/*.ipr
-/*.iws
-/out
-/out/*.*
-/shelf/
-
-# Others
-# ----
-**/*.class
-**/*.bin
-**/*.build
-**/*.out
-build
-build/
-**/*.jar
+/.idea/
+/out/

@@ -12,7 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c7496c96-d164-43c0-8140-bd938d9423fe" name="Default Changelist" comment="Test">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CalculatorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculatorGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588807834896</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Test">
+      <created>1588807999277</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588807999277</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,10 +200,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="117" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588802141292" />
-    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1588807612344">
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1588808336589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588807612344" />
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588808336589" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1588802435220">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -218,22 +224,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="657" y="280" width="388" height="263" key="MultipleFileMergeDialog/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588807459268" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1588807615752">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1588808338424">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588807615752" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588807860962">
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588808338424" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588808145327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588807860962" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588808145327" />
     <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588806280985">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588806280985" />
-    <state x="487" y="201" key="git4idea.merge.GitPullDialog" timestamp="1588803790116">
+    <state x="487" y="201" key="git4idea.merge.GitPullDialog" timestamp="1588808305107">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="487" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588803790116" />
+    <state x="487" y="201" key="git4idea.merge.GitPullDialog/0.0.1536.824/1920.-635.1680.1010@0.0.1536.824" timestamp="1588808305107" />
     <state x="209" y="33" key="new project wizard" timestamp="1588805877099">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
