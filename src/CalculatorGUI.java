@@ -38,5 +38,4 @@ public class CalculatorGUI extends JFrame {
         JFrame frame = new CalculatorGUI("My Calculator");
         frame.setVisible(true);
     }
-
 }
