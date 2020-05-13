@@ -36,8 +36,8 @@ public class CalculatorGUI extends JFrame {
         this.pack();
 
 
-        decimalButton.addActionListener(new BtnClicked(decimalButton.getText()));
-        calculateButton.addActionListener(new BtnClicked(calculateButton.getText()));
+        decimalButton.addActionListener(new NumberBtnClicked(decimalButton.getText()));
+        calculateButton.addActionListener(new NumberBtnClicked(calculateButton.getText()));
 
         a0Button.addActionListener(new NumberBtnClicked(a0Button.getText()));
         a1Button.addActionListener(new NumberBtnClicked(a1Button.getText()));
@@ -58,7 +58,7 @@ public class CalculatorGUI extends JFrame {
         exponentButton.addActionListener(new OperandBtnClicked(exponentButton.getText()));
         rootButton.addActionListener(new OperandBtnClicked(rootButton.getText()));
 
-        clearButton.addActionListener(new BtnClicked(clearButton.getText()));
+        clearButton.addActionListener(new NumberBtnClicked(clearButton.getText()));
     }
 
     private class NumberBtnClicked implements ActionListener {
@@ -106,4 +106,3 @@ public class CalculatorGUI extends JFrame {
         int[] intArray = (int[])java.lang.reflect.Array.newInstance(int.class, sizeOfArray);
     }
 }
-
