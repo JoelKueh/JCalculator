@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 
 public class CalculatorGUI extends JFrame {
     private JPanel mainPanel;
@@ -27,6 +26,9 @@ public class CalculatorGUI extends JFrame {
     private JButton piButton;
     private JTextArea inputStringTextArea;
     private JTextArea outputStringTextArea;
+
+    String memoryString = "";
+    String[] inputArray = {"0"};
 
     public CalculatorGUI(String title) {
         super(title);
@@ -70,9 +72,9 @@ public class CalculatorGUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("Number Clicked");
+            memoryString += inputStr;
 
-
+            System.out.println(memoryString);
         }
     }
 
@@ -85,7 +87,14 @@ public class CalculatorGUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("Operand Clicked");
+//            for(int x = 0; x<inputArray.length; x++) {
+//                inputArray[x] = inputStr;
+//            };
+
+            int x = inputArray.length + 1;
+//            inputArray[x] = inputStr;
+
+            System.out.println(x);
         }
     }
 
@@ -105,4 +114,5 @@ public class CalculatorGUI extends JFrame {
 
         int[] intArray = (int[])java.lang.reflect.Array.newInstance(int.class, sizeOfArray);
     }
+
 }
