@@ -27,8 +27,7 @@ public class CalculatorGUI extends JFrame {
     private JTextArea inputStringTextArea;
     private JTextArea outputStringTextArea;
 
-    String memoryString = "";
-    String[] inputArray = {"0"};
+    MyStrArray myStrArray = new MyStrArray();
 
     public CalculatorGUI(String title) {
         super(title);
@@ -36,7 +35,6 @@ public class CalculatorGUI extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
         this.pack();
-
 
         decimalButton.addActionListener(new NumberBtnClicked(decimalButton.getText()));
         calculateButton.addActionListener(new NumberBtnClicked(calculateButton.getText()));
@@ -66,35 +64,22 @@ public class CalculatorGUI extends JFrame {
     private class NumberBtnClicked implements ActionListener {
         private String inputStr;
 
-        public NumberBtnClicked(String inputStr) {
-            this.inputStr = inputStr;
-        }
+        public NumberBtnClicked(String inputStr) { this.inputStr = inputStr; }
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            memoryString += inputStr;
-
-            System.out.println(memoryString);
+           myStrArray.AddNumberToMemory(inputStr);
         }
     }
 
     private class OperandBtnClicked implements ActionListener {
         private String inputStr;
 
-        public OperandBtnClicked(String inputStr) {
-            this.inputStr = inputStr;
-        }
+        public OperandBtnClicked(String inputStr) { this.inputStr = inputStr; }
 
         @Override
         public void actionPerformed(ActionEvent e) {
-//            for(int x = 0; x<inputArray.length; x++) {
-//                inputArray[x] = inputStr;
-//            };
-
-            int x = inputArray.length + 1;
-//            inputArray[x] = inputStr;
-
-            System.out.println(x);
+            myStrArray.printMemory();
         }
     }
 
@@ -106,13 +91,9 @@ public class CalculatorGUI extends JFrame {
     }
 
     public static void main(String[] args) {
-        //Setting up GUI
+        //Setting panel to hold GUI
         JFrame frame = new CalculatorGUI("My Calculator");
         frame.setVisible(true);
-
-        int sizeOfArray = 100;
-
-        int[] intArray = (int[])java.lang.reflect.Array.newInstance(int.class, sizeOfArray);
     }
 
 }
