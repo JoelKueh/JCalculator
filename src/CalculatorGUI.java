@@ -79,14 +79,15 @@ public class CalculatorGUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            myStrArray.printMemory();
+            myStrArray.SendNumMemory();
+            myStrArray.SendOther(inputStr);
         }
     }
 
     private class ClearBtnClicked implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            myStrArray.PrintArray();
         }
     }
 
