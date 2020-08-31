@@ -24,10 +24,14 @@ public class CalculatorGUI extends JFrame {
     private JButton exponentButton;
     private JButton rootButton;
     private JButton piButton;
-    private JTextArea inputStringTextArea;
-    private JTextArea outputStringTextArea;
+    private JTextArea inputTextArea;
+    private JTextArea outputTextArea;
+    private JButton leftPar;
+    private JButton rightPar;
+    private JButton backspaceButton;
 
     MyStrArray myStrArray = new MyStrArray();
+    private int temp = myStrArray.numberInputMemory.length();
 
     public CalculatorGUI(String title) {
         super(title);
@@ -37,7 +41,6 @@ public class CalculatorGUI extends JFrame {
         this.pack();
 
         decimalButton.addActionListener(new NumberBtnClicked(decimalButton.getText()));
-        calculateButton.addActionListener(new NumberBtnClicked(calculateButton.getText()));
 
         a0Button.addActionListener(new NumberBtnClicked(a0Button.getText()));
         a1Button.addActionListener(new NumberBtnClicked(a1Button.getText()));
@@ -57,8 +60,31 @@ public class CalculatorGUI extends JFrame {
         subtractButton.addActionListener(new OperandBtnClicked(subtractButton.getText()));
         exponentButton.addActionListener(new OperandBtnClicked(exponentButton.getText()));
         rootButton.addActionListener(new OperandBtnClicked(rootButton.getText()));
+        leftPar.addActionListener(new OperandBtnClicked(leftPar.getText()));
+        rightPar.addActionListener(new OperandBtnClicked(rightPar.getText()));
 
-        clearButton.addActionListener(new NumberBtnClicked(clearButton.getText()));
+        calculateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myStrArray.stopCalculation = false;
+            }
+        });
+
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myStrArray.clearArray();
+                inputTextArea.setText(myStrArray.getInputDisplayStr());
+            }
+        });
+
+        backspaceButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myStrArray.backspace();
+                inputTextArea.setText(myStrArray.getInputDisplayStr());
+            }
+        });
     }
 
     private class NumberBtnClicked implements ActionListener {
@@ -68,7 +94,8 @@ public class CalculatorGUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-           myStrArray.AddNumberToMemory(inputStr);
+           myStrArray.addNumberToMemory(inputStr);
+           inputTextArea.setText(myStrArray.getInputDisplayStr());
         }
     }
 
@@ -79,15 +106,9 @@ public class CalculatorGUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            myStrArray.SendNumMemory();
-            myStrArray.SendOther(inputStr);
-        }
-    }
-
-    private class ClearBtnClicked implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            myStrArray.PrintArray();
+            myStrArray.sendNumMemory();
+            myStrArray.sendOther(inputStr);
+            inputTextArea.setText(myStrArray.getInputDisplayStr());
         }
     }
 
@@ -96,5 +117,4 @@ public class CalculatorGUI extends JFrame {
         JFrame frame = new CalculatorGUI("My Calculator");
         frame.setVisible(true);
     }
-
 }
